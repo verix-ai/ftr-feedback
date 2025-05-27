@@ -1,4 +1,5 @@
 {
+  "name": "flow-to-restore-feedback-form",
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
   "rewrites": [

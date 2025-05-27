@@ -242,28 +242,7 @@ function validateForm() {
     return isValid;
 }
 
-// Function to handle form data submission to a server (example)
-async function submitToServer(formData) {
-    try {
-        const response = await fetch('/submit-feedback', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        });
-        
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        
-        const result = await response.json();
-        return result;
-    } catch (error) {
-        console.error('Error submitting form:', error);
-        throw error;
-    }
-}
+
 
 // Function to show notifications
 function showNotification(message, type = 'success') {
@@ -306,7 +285,7 @@ function showNotification(message, type = 'success') {
         notification.style.transform = 'translateX(0)';
     }, 100);
     
-    // Auto remove after configured duration
+    // Auto remove after 5 seconds
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
         setTimeout(() => {
@@ -314,7 +293,7 @@ function showNotification(message, type = 'success') {
                 notification.parentNode.removeChild(notification);
             }
         }, 300);
-    }, CONFIG.NOTIFICATION_DURATION_MS);
+    }, 5000);
 }
 
 // Add smooth scrolling for better UX
