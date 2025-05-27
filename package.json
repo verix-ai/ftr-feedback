@@ -1,0 +1,13 @@
+{
+  "name": "flow-to-restore-feedback",
+  "version": "1.0.0",
+  "description": "Flow to Restore surf & yoga retreat feedback form",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site served by Vercel'"
+  },
+  "keywords": ["feedback", "form", "airtable", "vercel"],
+  "author": "Flow to Restore",
+  "license": "MIT"
+} 

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow to Restore - Retreat Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Logo_White.png" alt="Flow to Restore - Surf & Yoga Retreat" class="header-logo">
+            <p class="subtitle">Thank you for joining us! Your feedback helps us grow and create even better experiences.</p>
+        </header>
+
+        <form id="feedbackForm" class="feedback-form">
+            <!-- Section 1: General Information -->
+            <section class="form-section">
+                <h2>1. General Information</h2>
+                <div class="form-group">
+                    <label for="name">Name (optional):</label>
+                    <input type="text" id="name" name="name" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email (optional):</label>
+                    <input type="email" id="email" name="email" class="form-input">
+                </div>
+
+            </section>
+
+            <!-- Section 2: Overall Experience -->
+            <section class="form-section">
+                <h2>2. Overall Experience</h2>
+                <p class="section-description">How would you rate the following? (1 = Poor, 5 = Excellent)</p>
+                
+                <div class="slider-group">
+                    <label for="booking">Booking & Pre-Retreat Communication:</label>
+                    <div class="slider-container">
+                        <input type="range" id="booking" name="booking" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="booking-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="accommodation">Accommodation & Facilities:</label>
+                    <div class="slider-container">
+                        <input type="range" id="accommodation" name="accommodation" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="accommodation-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="food">Food & Nutrition:</label>
+                    <div class="slider-container">
+                        <input type="range" id="food" name="food" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="food-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="surf">Surf Instruction & Experience:</label>
+                    <div class="slider-container">
+                        <input type="range" id="surf" name="surf" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="surf-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="yoga">Yoga Classes & Experience:</label>
+                    <div class="slider-container">
+                        <input type="range" id="yoga" name="yoga" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="yoga-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="tours">Tours & Excursions:</label>
+                    <div class="slider-container">
+                        <input type="range" id="tours" name="tours" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="tours-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="atmosphere">Overall Atmosphere/Vibe:</label>
+                    <div class="slider-container">
+                        <input type="range" id="atmosphere" name="atmosphere" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="atmosphere-value">3</span></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="value">Value for Money:</label>
+                    <div class="slider-container">
+                        <input type="range" id="value" name="value" min="1" max="5" value="3" class="slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="slider-value">Rating: <span id="value-value">3</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Highlights -->
+            <section class="form-section">
+                <h2>3. Highlights</h2>
+                <div class="form-group">
+                    <label for="highlights">What was the highlight of your retreat experience?</label>
+                    <textarea id="highlights" name="highlights" rows="4" class="form-textarea" placeholder="Share your favorite moments..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 4: Improvements -->
+            <section class="form-section">
+                <h2>4. Improvements</h2>
+                <div class="form-group">
+                    <label for="improvements">What could we improve or do differently?</label>
+                    <textarea id="improvements" name="improvements" rows="4" class="form-textarea" placeholder="Your suggestions for improvement..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 5: Yoga & Surf -->
+            <section class="form-section">
+                <h2>5. Yoga & Surf</h2>
+                <div class="form-group">
+                    <label>Did the balance between yoga and surf meet your expectations?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="balance" value="yes">
+                            <span class="radio-custom"></span>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="balance" value="no">
+                            <span class="radio-custom"></span>
+                            No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="balance-comments">Comments:</label>
+                    <textarea id="balance-comments" name="balance-comments" rows="3" class="form-textarea" placeholder="Additional thoughts on the yoga/surf balance..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 6: Tours & Excursions -->
+            <section class="form-section">
+                <h2>6. Tours & Excursions</h2>
+                <div class="form-group">
+                    <label for="tour-feedback">Did you enjoy the tours? Any suggestions for future activities?</label>
+                    <textarea id="tour-feedback" name="tour-feedback" rows="4" class="form-textarea" placeholder="Tell us about your tour experience and suggestions..."></textarea>
+                </div>
+            </section>
+
+            <!-- Section 7: Would You Recommend Us? -->
+            <section class="form-section">
+                <h2>7. Would You Recommend Us?</h2>
+                <div class="form-group">
+                    <label>Would you recommend this retreat to a friend?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="recommend" value="yes">
+                            <span class="radio-custom"></span>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="recommend" value="no">
+                            <span class="radio-custom"></span>
+                            No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Would you consider returning?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="return" value="yes">
+                            <span class="radio-custom"></span>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="return" value="no">
+                            <span class="radio-custom"></span>
+                            No
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: How Did You Hear About Us -->
+            <section class="form-section">
+                <h2>8. How Did You Hear About Flow To Restore?</h2>
+                <div class="form-group">
+                    <label>How did you hear about us?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="hear-about" value="instagram">
+                            <span class="radio-custom"></span>
+                            Instagram
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="hear-about" value="facebook">
+                            <span class="radio-custom"></span>
+                            Facebook
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="hear-about" value="youtube">
+                            <span class="radio-custom"></span>
+                            Youtube
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="hear-about" value="friend">
+                            <span class="radio-custom"></span>
+                            Friend
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="hear-about" value="other">
+                            <span class="radio-custom"></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="hear-about-other">If other, please specify:</label>
+                    <input type="text" id="hear-about-other" name="hear-about-other" class="form-input" placeholder="Please specify...">
+                </div>
+            </section>
+
+            <!-- Section 9: Final Thoughts -->
+            <section class="form-section">
+                <h2>9. Final Thoughts</h2>
+                <div class="form-group">
+                    <label for="final-thoughts">Any other comments, testimonials, or messages for the team?</label>
+                    <textarea id="final-thoughts" name="final-thoughts" rows="5" class="form-textarea" placeholder="Share any final thoughts, testimonials, or messages..."></textarea>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

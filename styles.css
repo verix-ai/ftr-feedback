@@ -1,0 +1,361 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times', serif;
+    line-height: 1.7;
+    color: #264653;
+    background: linear-gradient(135deg, #a8dadc 0%, #457b9d 50%, #f1faee 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    cursor: url(https://cur.cursors-4u.net/sports/spo-8/spo702.cur), auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #e7a544 0%, #f4a261 30%, #e9c46a 70%, #e7a544 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-logo {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: 'Georgia', serif;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    max-width: 650px;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Form styles */
+.feedback-form {
+    padding: 40px 30px;
+}
+
+.form-section {
+    margin-bottom: 45px;
+    padding-bottom: 35px;
+    border-bottom: 2px solid #a8dadc;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h2 {
+    color: #264653;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+    border-left: 5px solid #2a9d8f;
+    padding-left: 20px;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Input styles */
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
+}
+
+/* Slider styles */
+.slider-group {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(145deg, #f1faee, #e9f7f5);
+    border-radius: 12px;
+    border: 2px solid #a8dadc;
+    box-shadow: 0 2px 8px rgba(42, 157, 143, 0.05);
+}
+
+.slider-group label {
+    font-weight: 600;
+    color: #264653;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 1.05rem;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #a8dadc 0%, #457b9d 50%, #2a9d8f 100%);
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    margin-bottom: 10px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 14px;
+    border-radius: 16px 16px 16px 16px;
+    background: linear-gradient(90deg, #f4a261 0%, #e9c46a 30%, #ffffff 50%, #e9c46a 70%, #f4a261 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(244, 162, 97, 0.4), inset 0 1px 3px rgba(255,255,255,0.3);
+    border: 1px solid #e76f51;
+    position: relative;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(90deg, #e76f51 0%, #f4a261 30%, #ffffff 50%, #f4a261 70%, #e76f51 100%);
+    box-shadow: 0 5px 12px rgba(244, 162, 97, 0.6), inset 0 1px 3px rgba(255,255,255,0.4);
+}
+
+.slider::-moz-range-thumb {
+    width: 32px;
+    height: 14px;
+    border-radius: 16px 16px 16px 16px;
+    background: linear-gradient(90deg, #f4a261 0%, #e9c46a 30%, #ffffff 50%, #e9c46a 70%, #f4a261 100%);
+    cursor: pointer;
+    border: 1px solid #e76f51;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(244, 162, 97, 0.4);
+}
+
+.slider::-moz-range-thumb:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(90deg, #e76f51 0%, #f4a261 30%, #ffffff 50%, #f4a261 70%, #e76f51 100%);
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.slider-value {
+    text-align: center;
+    font-weight: 600;
+    color: #264653;
+    font-size: 1.1rem;
+}
+
+/* Radio button styles */
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+    border-color: #2a9d8f;
+    background: #2a9d8f;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Submit button */
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #a8dadc;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #f4a261 0%, #e9c46a 100%);
+    color: #264653;
+    padding: 18px 45px;
+    border: none;
+    border-radius: 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(244, 162, 97, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(244, 162, 97, 0.4);
+    background: linear-gradient(135deg, #e76f51 0%, #f4a261 100%);
+    color: white;
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    header {
+        padding: 30px 20px;
+    }
+    
+    .header-logo {
+        max-width: 210px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .feedback-form {
+        padding: 30px 20px;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .slider-group {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        max-width: 175px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .feedback-form {
+        padding: 20px 15px;
+    }
+} 
