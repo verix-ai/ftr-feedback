@@ -1,6 +1,7 @@
 {
   "name": "flow-to-restore-feedback",
   "version": "1.0.0",
+  "type": "module",
   "description": "Flow to Restore surf & yoga retreat feedback form",
   "scripts": {
     "dev": "vercel dev",

@@ -30,32 +30,44 @@ export default async function handler(req, res) {
         // Get form data from request body
         const formData = req.body;
 
-        // Prepare data for Airtable format
+        // Prepare data for Airtable format - only include non-empty values for select fields
+        const fields = {
+            'Name': formData.name || '',
+            'Email': formData.email || '',
+            'Booking Rating': parseInt(formData.booking) || 3,
+            'Accommodation Rating': parseInt(formData.accommodation) || 3,
+            'Food Rating': parseInt(formData.food) || 3,
+            'Surf Rating': parseInt(formData.surf) || 3,
+            'Yoga Rating': parseInt(formData.yoga) || 3,
+            'Tours Rating': parseInt(formData.tours) || 3,
+            'Atmosphere Rating': parseInt(formData.atmosphere) || 3,
+            'Value Rating': parseInt(formData.value) || 3,
+            'Highlights': formData.highlights || '',
+            'Improvements': formData.improvements || '',
+            'Balance Comments': formData['balance-comments'] || '',
+            'Tour Feedback': formData['tour-feedback'] || '',
+            'Hear About Other': formData['hear-about-other'] || '',
+            'Final Thoughts': formData['final-thoughts'] || '',
+            'Submission Time': formData.submissionTime || new Date().toISOString()
+        };
+
+        // Only add select fields if they have values
+        if (formData.balance && formData.balance.trim()) {
+            fields['Balance'] = formData.balance;
+        }
+        if (formData.recommend && formData.recommend.trim()) {
+            fields['Recommend'] = formData.recommend;
+        }
+        if (formData.return && formData.return.trim()) {
+            fields['Return'] = formData.return;
+        }
+        if (formData['hear-about'] && formData['hear-about'].trim()) {
+            fields['Hear About'] = formData['hear-about'];
+        }
+
         const airtableData = {
             records: [{
-                fields: {
-                    'Name': formData.name || '',
-                    'Email': formData.email || '',
-                    'Booking Rating': parseInt(formData.booking) || 3,
-                    'Accommodation Rating': parseInt(formData.accommodation) || 3,
-                    'Food Rating': parseInt(formData.food) || 3,
-                    'Surf Rating': parseInt(formData.surf) || 3,
-                    'Yoga Rating': parseInt(formData.yoga) || 3,
-                    'Tours Rating': parseInt(formData.tours) || 3,
-                    'Atmosphere Rating': parseInt(formData.atmosphere) || 3,
-                    'Value Rating': parseInt(formData.value) || 3,
-                    'Highlights': formData.highlights || '',
-                    'Improvements': formData.improvements || '',
-                    'Balance': formData.balance || '',
-                    'Balance Comments': formData['balance-comments'] || '',
-                    'Tour Feedback': formData['tour-feedback'] || '',
-                    'Recommend': formData.recommend || '',
-                    'Return': formData.return || '',
-                    'Hear About': formData['hear-about'] || '',
-                    'Hear About Other': formData['hear-about-other'] || '',
-                    'Final Thoughts': formData['final-thoughts'] || '',
-                    'Submission Time': formData.submissionTime || new Date().toISOString()
-                }
+                fields: fields
             }]
         };
 
